@@ -766,6 +766,23 @@
       footer { flex-direction: column; text-align: center; }
       .footer-links { justify-content: center; }
       .footer-cities { text-align: center; }
+
+      /* Hero — dölj den subtila befintlig-kund-länken på mobil */
+      .hero-existing { display: none; }
+
+      /* Gallery — stapla foton i en kolumn på mobil */
+      .gallery-photos { grid-template-columns: 1fr; }
+      .gphoto { aspect-ratio: 16 / 9; }
+    }
+
+    @media (max-width: 480px) {
+      /* Hero-rubrik — förhindra overflow på riktigt små skärmar */
+      .hero-brand .t-poster,
+      .hero-brand .t-catalan { font-size: clamp(58px, 15vw, 76px); }
+
+      /* Städer — två kolumner istället för tre på tablet */
+      .cities { grid-template-columns: repeat(2, 1fr); }
+      .city:last-child { grid-column: 1 / -1; }
     }
   </style>
 </head>
