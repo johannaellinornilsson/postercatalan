@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Poster Catalan – Malmös mesta affischerare — wildposting sedan 2001</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
   <!-- SEO: grundläggande -->
   <meta name="description" content="Poster Catalan – Malmös mest erfarna wildposting-företag sedan 2001. Vi sätter upp affischer, flyers och kampanjer i Malmö, Skåne och København. Syns på riktigt, på gatan.">
@@ -75,7 +78,7 @@
       --cream:       #F0EAD8;
       --muted:       #7A7060;
       --border:      rgba(255,255,255,0.07);
-      --f-display:   Impact, 'Arial Black', Arial, sans-serif;
+      --f-display:   'Anton', Impact, 'Arial Black', Arial, sans-serif;
       --f-body:      'Courier New', Courier, monospace;
     }
 
@@ -767,8 +770,8 @@
       .footer-links { justify-content: center; }
       .footer-cities { text-align: center; }
 
-      /* Hero — dölj den subtila befintlig-kund-länken på mobil */
-      .hero-existing { display: none; }
+      /* Hero — gör befintlig-kund-länken lite mer synlig på mobil */
+      .hero-existing { color: rgba(240,234,216,0.45); font-size: 12px; }
 
       /* Gallery — stapla foton i en kolumn på mobil */
       .gallery-photos { grid-template-columns: 1fr; }
@@ -776,6 +779,10 @@
     }
 
     @media (max-width: 480px) {
+      /* Hero — kortare + centrerat innehåll på mobil */
+      .hero { min-height: 70svh; align-items: center; }
+      .hero-content { padding-bottom: clamp(24px, 5vh, 48px); }
+
       /* Hero-rubrik — förhindra overflow på riktigt små skärmar */
       .hero-brand .t-poster,
       .hero-brand .t-catalan { font-size: clamp(58px, 15vw, 76px); }
@@ -799,7 +806,7 @@
       <span class="t-catalan">CATALAN</span>
     </div>
     <p class="hero-year">Malmös mesta affischerare — wildposting sedan 2001</p>
-    <p class="hero-text">Vi sätter upp dina affischer där<br>de syns. På gatan. På riktigt.</p>
+    <p class="hero-text">Vi sätter upp dina affischer där de syns. På gatan. På riktigt.</p>
     <div style="display:flex;align-items:center;gap:clamp(16px,2.5vw,28px);flex-wrap:wrap">
       <a href="formulär.html" class="btn-cta">BOKA NU &nbsp;&#8594;</a>
       <a href="fakturering.html" class="hero-existing">Befintlig kund? Lämna faktureringsuppgifter här &rarr;</a>

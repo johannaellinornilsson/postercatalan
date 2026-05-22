@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Skicka förfrågan – Poster Catalan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     img { display: block; max-width: 100%; }
@@ -22,7 +25,7 @@
       --muted:       #7A7060;
       --border:      rgba(255,255,255,0.07);
       --border-form: rgba(255,255,255,0.12);
-      --f-display:   Impact, 'Arial Black', Arial, sans-serif;
+      --f-display:   'Anton', Impact, 'Arial Black', Arial, sans-serif;
       --f-body:      'Courier New', Courier, monospace;
     }
 
@@ -756,11 +759,24 @@
     if (!namn) { document.getElementById('namn').focus(); return; }
     if (!epost || !epost.includes('@')) { document.getElementById('epost').focus(); return; }
 
-    // Hide form, show success
-    document.getElementById('booking-form').style.display = 'none';
-    const success = document.getElementById('form-success');
-    success.classList.add('visible');
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    // Skicka till Formspree via AJAX
+    var form = document.getElementById('booking-form');
+    fetch('https://formspree.io/f/mlgvnenv', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        var success = document.getElementById('form-success');
+        success.classList.add('visible');
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        alert('Något gick fel. Försök igen eller maila oss direkt på hej@postercatalan.com');
+      }
+    }).catch(function() {
+      alert('Något gick fel. Försök igen eller maila oss direkt på hej@postercatalan.com');
+    });
   });
 </script>
 
