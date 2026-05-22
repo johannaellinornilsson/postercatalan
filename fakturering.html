@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fakturering – Poster Catalan</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
+
+    :root {
+      --yellow:      #F5C100;
+      --yellow-dark: #C49800;
+      --red:         #8B2015;
+      --red-bright:  #A32518;
+      --dark:        #0C0B08;
+      --dark-warm:   #131109;
+      --dark-mid:    #1C1A14;
+      --dark-light:  #4A4535;
+      --paper:       #DDD0B0;
+      --cream:       #F0EAD8;
+      --muted:       #7A7060;
+      --border:      rgba(255,255,255,0.07);
+      --border-form: rgba(255,255,255,0.12);
+      --f-display:   Impact, 'Arial Black', Arial, sans-serif;
+      --f-body:      'Courier New', Courier, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      background: #EAE2CA;
+      color: #1A1408;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    /* ── Grain overlay ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 250px 250px;
+      opacity: 0.045;
+      mix-blend-mode: screen;
+    }
+
+    /* ================================================================
+       HEADER / NAV
+    ================================================================ */
+    .site-header {
+      background: var(--dark-warm);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: clamp(14px,2vw,22px) clamp(24px,6vw,80px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-logo {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(18px, 2.2vw, 26px);
+      line-height: 1.05;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .header-logo span {
+      display: block;
+      font-size: clamp(8px, 0.8vw, 10px);
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      text-transform: uppercase;
+      font-family: var(--f-body);
+      font-weight: normal;
+      margin-top: 1px;
+    }
+
+    .header-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--f-body);
+      font-size: clamp(11px, 1.1vw, 13px);
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: color .18s;
+    }
+
+    .header-back:hover { color: var(--cream); }
+
+    /* ================================================================
+       FORM HERO STRIP
+    ================================================================ */
+    .form-hero {
+      position: relative;
+      background: var(--dark-mid);
+      border-bottom: 3px solid var(--yellow);
+      padding: clamp(40px,6vw,72px) clamp(24px,6vw,80px) clamp(32px,5vw,56px);
+      overflow: hidden;
+    }
+
+    .form-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40'%3E%3Crect width='80' height='40' fill='%23251A0E'/%3E%3Crect x='1' y='1' width='37' height='17' rx='0.5' fill='%23381E0A' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='40' y='1' width='38' height='17' rx='0.5' fill='%233A2010' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='1' y='21' width='18' height='17' rx='0.5' fill='%233A2010' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='21' y='21' width='37' height='17' rx='0.5' fill='%23381E0A' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='60' y='21' width='19' height='17' rx='0.5' fill='%233A2010' stroke='%23110A02' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 80px 40px;
+    }
+
+    .form-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+    }
+
+    .form-hero h1 {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(42px, 7vw, 96px);
+      color: var(--cream);
+      letter-spacing: 0.02em;
+      line-height: 0.92;
+      margin-bottom: 20px;
+    }
+
+    .form-hero h1 em {
+      color: var(--yellow);
+      font-style: normal;
+    }
+
+    .form-hero p {
+      font-family: var(--f-body);
+      font-size: clamp(13px, 1.4vw, 16px);
+      color: var(--muted);
+      max-width: 520px;
+      line-height: 1.65;
+    }
+
+    /* ================================================================
+       MAIN FORM LAYOUT
+    ================================================================ */
+    .form-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: clamp(40px,5vw,72px) clamp(24px,6vw,80px) clamp(60px,8vw,100px);
+    }
+
+    .form-section {
+      margin-bottom: clamp(36px,5vw,56px);
+    }
+
+    /* Conditional section — hidden until triggered */
+    .form-section.conditional {
+      display: none;
+    }
+    .form-section.conditional.visible {
+      display: block;
+    }
+
+    .form-section-label {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(11px, 1vw, 13px);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red-bright);
+      margin-bottom: 22px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-section-label::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: var(--red-bright);
+      flex-shrink: 0;
+    }
+
+    .form-row {
+      display: grid;
+      gap: clamp(16px,2vw,24px);
+      margin-bottom: clamp(16px,2vw,24px);
+    }
+
+    .form-row.cols-2 { grid-template-columns: 1fr 1fr; }
+    .form-row.cols-1 { grid-template-columns: 1fr; }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    label {
+      font-family: var(--f-body);
+      font-size: clamp(11px, 1vw, 12.5px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #1A1408;
+    }
+
+    label .req {
+      color: var(--red-bright);
+      margin-left: 2px;
+    }
+
+    .field-hint {
+      font-family: var(--f-body);
+      font-size: clamp(11px, 0.95vw, 12px);
+      color: #5A5040;
+      font-style: italic;
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+      font-family: var(--f-body);
+      font-size: clamp(13px, 1.2vw, 15px);
+      color: var(--cream);
+      background: var(--dark-light);
+      border: 1px solid var(--border-form);
+      padding: 14px 16px;
+      width: 100%;
+      outline: none;
+      appearance: none;
+      transition: border-color .18s, background .18s;
+      border-radius: 0;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: var(--muted);
+      opacity: 0.6;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--yellow);
+      background: #1e1c14;
+    }
+
+    /* ── Radio / Checkbox groups ── */
+    .choice-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .choice-item {
+      position: relative;
+    }
+
+    .choice-item input[type="radio"],
+    .choice-item input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .choice-item label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(11px, 1.1vw, 13px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--dark-light);
+      border: 1px solid var(--border-form);
+      padding: 10px 18px;
+      cursor: pointer;
+      transition: border-color .18s, color .18s, background .18s;
+      white-space: nowrap;
+    }
+
+    .choice-item label::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border: 1.5px solid rgba(240,234,216,0.55);
+      flex-shrink: 0;
+      transition: background .18s, border-color .18s;
+    }
+
+    .choice-item input[type="radio"] + label::before { border-radius: 50%; }
+
+    .choice-item input:checked + label {
+      border-color: var(--yellow);
+      color: var(--yellow);
+      background: rgba(245,193,0,0.06);
+    }
+
+    .choice-item input:checked + label::before {
+      background: var(--yellow);
+      border-color: var(--yellow);
+    }
+
+    /* ── Divider ── */
+    .form-divider {
+      border: none;
+      border-top: 1px solid rgba(0,0,0,0.12);
+      margin: clamp(32px,4vw,48px) 0;
+    }
+
+    /* ── Submit area ── */
+    .form-submit-area {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+      padding-top: clamp(24px,3vw,40px);
+      border-top: 1px solid rgba(0,0,0,0.12);
+    }
+
+    .form-submit-note {
+      font-family: var(--f-body);
+      font-size: 12px;
+      color: #3A3020;
+      line-height: 1.6;
+      max-width: 340px;
+    }
+
+    .form-submit-note a {
+      color: var(--red-bright);
+      text-decoration: none;
+    }
+
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--yellow);
+      color: var(--dark);
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(15px, 1.8vw, 20px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border: none;
+      padding: clamp(14px,1.8vw,20px) clamp(28px,3.5vw,48px);
+      cursor: pointer;
+      transition: background .18s ease, gap .18s ease;
+    }
+
+    .btn-submit:hover { background: var(--yellow-dark); gap: 20px; }
+
+    /* ── Success message ── */
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: clamp(48px,8vw,96px) 24px;
+    }
+
+    .form-success.visible { display: block; }
+
+    .success-icon {
+      font-size: 64px;
+      line-height: 1;
+      margin-bottom: 24px;
+      color: var(--yellow);
+    }
+
+    .form-success h2 {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(32px, 5vw, 64px);
+      color: #1A1408;
+      letter-spacing: 0.03em;
+      margin-bottom: 16px;
+    }
+
+    .form-success p {
+      font-family: var(--f-body);
+      font-size: clamp(13px, 1.3vw, 15px);
+      color: #3A3020;
+      line-height: 1.7;
+      max-width: 440px;
+      margin: 0 auto 36px;
+    }
+
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--red-bright);
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(13px, 1.4vw, 16px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--red-bright);
+      transition: opacity .18s;
+    }
+
+    .btn-back-home:hover { opacity: 0.7; }
+
+    /* ================================================================
+       FOOTER
+    ================================================================ */
+    .site-footer {
+      background: var(--dark-warm);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: clamp(18px,2.4vw,28px) clamp(24px,6vw,80px);
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(16px, 2vw, 24px);
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+      text-decoration: none;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--f-body);
+      font-size: clamp(11.5px, 1.1vw, 13px);
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .18s;
+    }
+
+    .footer-link:hover { color: var(--cream); }
+    .footer-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    .footer-cities {
+      font-family: var(--f-body);
+      font-size: clamp(11px, 1vw, 12.5px);
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ================================================================
+       RESPONSIVE
+    ================================================================ */
+    @media (max-width: 700px) {
+      .form-row.cols-2 { grid-template-columns: 1fr; }
+      .form-submit-area { flex-direction: column; align-items: stretch; }
+      .btn-submit { justify-content: center; }
+      .site-footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ HEADER ══════════════════════ -->
+<header class="site-header">
+  <a href="poster-catalan.html" class="header-logo">
+    POSTER<br>CATALAN
+    <span>Malmös mesta affischerare — wildposting sedan 2001</span>
+  </a>
+  <a href="poster-catalan.html" class="header-back">
+    &#8592;&nbsp; Tillbaka till startsidan
+  </a>
+</header>
+
+<!-- ══════════════════════ FORM HERO ══════════════════════ -->
+<div class="form-hero">
+  <div class="form-hero-inner">
+    <h1>FAKTURERING<br><em>FÖR AFFISCHERING</em></h1>
+    <p>Fyll i uppgifterna nedan så skickar vi fakturan till rätt mottagare.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════ FORM ══════════════════════ -->
+<main class="form-wrapper">
+
+  <form id="faktura-form" novalidate>
+
+    <!-- ── 01. Uppdragsinfo ── -->
+    <div class="form-section">
+      <div class="form-section-label">01 &nbsp;Uppdragsinfo</div>
+
+      <div class="form-row cols-2">
+        <div class="form-group">
+          <label for="antal">Hur många affischer? <span class="req">*</span></label>
+          <input type="number" id="antal" name="antal" placeholder="T.ex. 100" min="1" required>
+        </div>
+        <div class="form-group">
+          <label for="foretag">Företag / Organisation <span class="req">*</span></label>
+          <p class="field-hint">Namn på företag/organisation som ska faktureras</p>
+          <input type="text" id="foretag" name="foretag" placeholder="Företagets eller organisationens namn" required>
+        </div>
+      </div>
+
+      <div class="form-row cols-2">
+        <div class="form-group">
+          <label for="kontakt">Kontaktperson <span class="req">*</span></label>
+          <p class="field-hint">Namn + e-post eller telefonnummer vid frågor kring uppdraget eller faktureringen</p>
+          <input type="text" id="kontakt" name="kontakt" placeholder="Namn och kontaktuppgifter" required>
+        </div>
+        <div class="form-group">
+          <label for="referens">Referens / övrig info på fakturan <span class="req">*</span></label>
+          <p class="field-hint">Ange namn, projekt, event etc som ska stå med på fakturan</p>
+          <input type="text" id="referens" name="referens" placeholder="T.ex. projektnamn eller evenemang" required>
+        </div>
+      </div>
+    </div>
+
+    <hr class="form-divider">
+
+    <!-- ── 02. Har ni faktureringsuppgifter? ── -->
+    <div class="form-section">
+      <div class="form-section-label">02 &nbsp;Faktureringsuppgifter</div>
+
+      <div class="form-group">
+        <label>Har vi redan era faktureringsuppgifter? <span class="req">*</span></label>
+        <div class="choice-group" style="margin-top:8px">
+          <div class="choice-item">
+            <input type="radio" name="har_uppgifter" id="h-ja" value="ja">
+            <label for="h-ja">Ja</label>
+          </div>
+          <div class="choice-item">
+            <input type="radio" name="har_uppgifter" id="h-nej" value="nej">
+            <label for="h-nej">Nej / Vet inte</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 03. Faktureringsdetaljer (visas om Nej/Vet inte) ── -->
+    <div class="form-section conditional" id="faktura-detaljer">
+      <div class="form-section-label">03 &nbsp;Faktureringsdetaljer</div>
+
+      <div class="form-row cols-2">
+        <div class="form-group">
+          <label for="orgnr">Organisationsnummer</label>
+          <input type="text" id="orgnr" name="orgnr" placeholder="XXXXXX-XXXX">
+        </div>
+        <div class="form-group">
+          <label for="efaktura-epost">E-post att maila faktura till</label>
+          <input type="email" id="efaktura-epost" name="efaktura_epost" placeholder="faktura@foretag.se">
+        </div>
+      </div>
+
+      <div class="form-row cols-1">
+        <div class="form-group">
+          <label>E-faktura?</label>
+          <div class="choice-group" style="margin-top:8px">
+            <div class="choice-item">
+              <input type="radio" name="efaktura" id="ef-ja" value="ja">
+              <label for="ef-ja">Ja</label>
+            </div>
+            <div class="choice-item">
+              <input type="radio" name="efaktura" id="ef-nej" value="nej">
+              <label for="ef-nej">Nej</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Submit ── -->
+    <div class="form-submit-area">
+      <p class="form-submit-note">
+        Frågor? Hör av dig direkt:<br>
+        <a href="tel:+46720152017">0720-152017</a> &nbsp;·&nbsp;
+        <a href="mailto:hej@postercatalan.com">hej@postercatalan.com</a>
+      </p>
+      <button type="submit" class="btn-submit">
+        SKICKA &nbsp;&#8594;
+      </button>
+    </div>
+
+  </form>
+
+  <!-- Success state -->
+  <div class="form-success" id="form-success">
+    <div class="success-icon">&#9786;</div>
+    <h2>TACK!</h2>
+    <p>Faktureringsuppgifterna är mottagna. Vi skickar fakturan så snart vi kan.</p>
+    <a href="poster-catalan.html" class="btn-back-home">&#8592;&nbsp; Tillbaka till startsidan</a>
+  </div>
+
+</main>
+
+<!-- ══════════════════════ FOOTER ══════════════════════ -->
+<footer class="site-footer">
+  <a href="poster-catalan.html" class="footer-logo">POSTER<br>CATALAN</a>
+
+  <a href="tel:+46720152017" class="footer-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+    </svg>
+    0720-152017
+  </a>
+
+  <a href="mailto:hej@postercatalan.com" class="footer-link">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <polyline points="2,6 12,14 22,6"/>
+    </svg>
+    hej@postercatalan.com
+  </a>
+
+  <div class="footer-cities">Malmö / Skåne / København</div>
+</footer>
+
+<script>
+  // Show/hide faktureringsdetaljer based on radio selection
+  const radios = document.querySelectorAll('input[name="har_uppgifter"]');
+  const detaljer = document.getElementById('faktura-detaljer');
+
+  radios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      if (this.value === 'nej') {
+        detaljer.classList.add('visible');
+      } else {
+        detaljer.classList.remove('visible');
+      }
+    });
+  });
+
+  // Form submit
+  document.getElementById('faktura-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const antal    = document.getElementById('antal').value.trim();
+    const foretag  = document.getElementById('foretag').value.trim();
+    const kontakt  = document.getElementById('kontakt').value.trim();
+    const referens = document.getElementById('referens').value.trim();
+    const harUppgifter = document.querySelector('input[name="har_uppgifter"]:checked');
+
+    if (!antal)    { document.getElementById('antal').focus(); return; }
+    if (!foretag)  { document.getElementById('foretag').focus(); return; }
+    if (!kontakt)  { document.getElementById('kontakt').focus(); return; }
+    if (!referens) { document.getElementById('referens').focus(); return; }
+    if (!harUppgifter) {
+      document.getElementById('h-ja').focus();
+      return;
+    }
+
+    document.getElementById('faktura-form').style.display = 'none';
+    const success = document.getElementById('form-success');
+    success.classList.add('visible');
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poster Catalan – Malmös mesta affischerare — wildposting sedan 2001</title>
+
+  <!-- SEO: grundläggande -->
+  <meta name="description" content="Poster Catalan – Malmös mest erfarna wildposting-företag sedan 2001. Vi sätter upp affischer, flyers och kampanjer i Malmö, Skåne och København. Syns på riktigt, på gatan.">
+  <meta name="keywords" content="affischering malmö, wildposting malmö, affischering skåne, wildposting, affischering köpenhamn, streetmarketing malmö, poster catalan, affischera malmö, kampanjaffischer, flyers malmö">
+  <meta name="author" content="Poster Catalan">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://postercatalan.com/">
+
+  <!-- SEO: Geo / lokal -->
+  <meta name="geo.region" content="SE-M">
+  <meta name="geo.placename" content="Malmö">
+  <meta name="geo.position" content="55.6050;13.0038">
+  <meta name="ICBM" content="55.6050, 13.0038">
+
+  <!-- SEO: Open Graph (delning i sociala medier) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://postercatalan.com/">
+  <meta property="og:title" content="Poster Catalan – Wildposting i Malmö sedan 2001">
+  <meta property="og:description" content="Vi sätter upp dina affischer där de syns. På gatan. På riktigt. Malmö, Skåne och København.">
+  <meta property="og:image" content="https://postercatalan.com/catalan/hero-red.png">
+  <meta property="og:locale" content="sv_SE">
+  <meta property="og:site_name" content="Poster Catalan">
+
+  <!-- SEO: Strukturerad data (Google LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Poster Catalan",
+    "description": "Malmös mest erfarna wildposting-företag sedan 2001. Affischering, flyers och kampanjer i Malmö, Skåne och København.",
+    "url": "https://postercatalan.com",
+    "telephone": "+46720152017",
+    "email": "hej@postercatalan.com",
+    "foundingDate": "2001",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Malmö",
+      "addressRegion": "Skåne",
+      "addressCountry": "SE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "55.6050",
+      "longitude": "13.0038"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Malmö" },
+      { "@type": "AdministrativeArea", "name": "Skåne" },
+      { "@type": "City", "name": "København" }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/catalanmarte/"
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    img { display: block; max-width: 100%; }
+
+    :root {
+      --yellow:      #F5C100;
+      --yellow-dark: #C49800;
+      --red:         #8B2015;
+      --red-bright:  #A32518;
+      --dark:        #0C0B08;
+      --dark-warm:   #131109;
+      --dark-mid:    #1C1A14;
+      --paper:       #DDD0B0;
+      --cream:       #F0EAD8;
+      --muted:       #7A7060;
+      --border:      rgba(255,255,255,0.07);
+      --f-display:   Impact, 'Arial Black', Arial, sans-serif;
+      --f-body:      'Courier New', Courier, monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--f-body);
+      background: var(--dark);
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    /* ── Grain overlay ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 250px 250px;
+      opacity: 0.045;
+      mix-blend-mode: screen;
+    }
+
+    /* ================================================================
+       HERO
+    ================================================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background-color: #12100C;
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to right,  rgba(10,9,6,0.93) 0%,  rgba(10,9,6,0.78) 38%, rgba(10,9,6,0.32) 66%, rgba(10,9,6,0.12) 100%),
+        linear-gradient(to top,    rgba(10,9,6,0.88) 0%,  rgba(10,9,6,0.00) 35%),
+        url("catalan/hero-red.png") center center / cover no-repeat;
+      background-color: #12100C;
+    }
+
+    /* brick texture */
+    .hero-photo::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40'%3E%3Crect width='80' height='40' fill='%23251A0E'/%3E%3Crect x='1' y='1' width='37' height='17' rx='0.5' fill='%23381E0A' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='40' y='1' width='38' height='17' rx='0.5' fill='%233A2010' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='1' y='21' width='18' height='17' rx='0.5' fill='%233A2010' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='21' y='21' width='37' height='17' rx='0.5' fill='%23381E0A' stroke='%23110A02' stroke-width='1'/%3E%3Crect x='60' y='21' width='19' height='17' rx='0.5' fill='%233A2010' stroke='%23110A02' stroke-width='1'/%3E%3C/svg%3E");
+      background-size: 80px 40px;
+    }
+
+    /* ivy tint top-left */
+    .hero-photo::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 38%; height: 55%;
+      background: radial-gradient(ellipse 90% 80% at 8% 0%, rgba(18,38,12,0.65) 0%, rgba(12,28,8,0.3) 55%, transparent 80%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: clamp(40px,8vw,80px) clamp(28px,6vw,80px) clamp(60px,10vh,110px);
+      max-width: min(680px, 90vw);
+    }
+
+    .hero-brand {
+      line-height: 0.86;
+      margin-bottom: 22px;
+    }
+
+    .hero-brand .t-poster {
+      display: block;
+      font-family: var(--f-display);
+      font-size: clamp(76px, 13.5vw, 178px);
+      font-weight: normal;
+      color: #EDE5D0;
+      letter-spacing: 0.02em;
+      text-shadow: 2px 4px 14px rgba(0,0,0,0.75), -1px -1px 0 rgba(0,0,0,0.35);
+    }
+
+    .hero-brand .t-catalan {
+      display: block;
+      font-family: var(--f-display);
+      font-size: clamp(76px, 13.5vw, 178px);
+      font-weight: normal;
+      color: var(--red);
+      letter-spacing: 0.02em;
+      text-shadow: 3px 5px 18px rgba(0,0,0,0.85), 1px 1px 0 rgba(0,0,0,0.5);
+    }
+
+    .hero-year {
+      font-family: var(--f-body);
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(13px, 1.8vw, 18px);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      display: inline-block;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--yellow);
+      margin-bottom: 18px;
+    }
+
+    .hero-text {
+      font-family: var(--f-body);
+      font-size: clamp(15px, 2vw, 19px);
+      color: var(--cream);
+      opacity: 0.88;
+      line-height: 1.5;
+      margin-bottom: 34px;
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--yellow);
+      color: #0C0B08;
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(15px, 1.8vw, 20px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: clamp(13px,1.5vw,18px) clamp(22px,3vw,38px);
+      transition: background .18s ease, gap .18s ease;
+    }
+
+    .btn-cta:hover { background: var(--yellow-dark); gap: 20px; }
+
+    /* ================================================================
+       FEATURES BAR
+    ================================================================ */
+    .features {
+      background: var(--dark-warm);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .features-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .feat {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: clamp(18px,2.4vw,30px) clamp(16px,2vw,28px);
+      border-right: 1px solid var(--border);
+    }
+
+    .feat:last-child { border-right: none; }
+
+    .feat-icon { flex-shrink: 0; width: 38px; height: 38px; margin-top: 1px; }
+    .feat-icon.red    { color: var(--red-bright); }
+    .feat-icon.yellow { color: var(--red-bright); }
+
+    .feat-body h4 {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(12px, 1.1vw, 14px);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+
+    .feat-body p {
+      font-family: var(--f-body);
+      font-style: italic;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ================================================================
+       BOOKING + CITIES
+    ================================================================ */
+    .booking-cities {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    /* paper panel */
+    .booking-panel {
+      position: relative;
+      background-color: var(--paper);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.55' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23p)' opacity='0.1'/%3E%3C/svg%3E");
+      color: #1A1408;
+      padding: clamp(32px,4vw,56px) clamp(28px,3.5vw,48px);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tape {
+      position: absolute;
+      height: 18px;
+      background: rgba(245,193,0,0.62);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.22);
+    }
+
+    .tape-1 { width: 52px; top: -3px; left: 22px;  transform: rotate(-1.5deg); }
+    .tape-2 { width: 44px; top: -3px; right: 50px;  transform: rotate(1.8deg); }
+
+    .booking-panel h2 {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(44px, 5.5vw, 70px);
+      color: #1A1408;
+      letter-spacing: 0.03em;
+      margin-top: 10px;
+      margin-bottom: clamp(24px, 3vw, 40px);
+    }
+
+    .service {
+      display: flex;
+      gap: 12px;
+      margin-bottom: clamp(18px, 2.4vw, 28px);
+    }
+
+    .service:last-child { margin-bottom: 0; }
+
+    .svc-icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      margin-top: 1px;
+      color: #1A1408;
+    }
+
+    .svc-body h3 {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(12.5px, 1.3vw, 15px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1A1408;
+      margin-bottom: 4px;
+    }
+
+    .svc-body p {
+      font-family: var(--f-body);
+      font-size: clamp(11.5px, 1.05vw, 13px);
+      color: #3A2E1C;
+      line-height: 1.6;
+    }
+
+    .booking-btn-wrap {
+      margin-top: auto;
+      padding-top: clamp(24px, 3vw, 40px);
+    }
+
+    .btn-booking {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #1A1408;
+      color: var(--paper);
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(13px, 1.4vw, 16px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 24px;
+      transition: background .18s, gap .18s;
+    }
+
+    .btn-booking:hover { background: #2a2010; gap: 18px; }
+
+    /* city cards */
+    .cities {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .city {
+      position: relative;
+      overflow: hidden;
+      min-height: 420px;
+      cursor: pointer;
+    }
+
+    .city-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform .6s cubic-bezier(.25,.46,.45,.94);
+    }
+
+    .city:hover .city-bg { transform: scale(1.06); }
+
+    .city-malmo .city-bg { background-image: url("catalan/malmö.png");    background-size: cover; background-position: center center; }
+    .city-skane .city-bg { background-image: url("catalan/lund-red.png"); background-size: cover; background-position: center top; }
+    .city-kbh   .city-bg { background-image: url("catalan/cph.png");      background-size: cover; background-position: center center; }
+
+    .city-vignette {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.12) 55%, rgba(0,0,0,0.38) 100%);
+      z-index: 1;
+    }
+
+    .city-label {
+      position: absolute;
+      bottom: clamp(16px,2.5vw,28px);
+      left: clamp(14px,2vw,20px);
+      z-index: 2;
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(26px, 3.4vw, 52px);
+      color: #fff;
+      letter-spacing: 0.06em;
+      text-shadow: 1px 2px 10px rgba(0,0,0,0.55);
+    }
+
+    /* ================================================================
+       GALLERY + INSTAGRAM
+    ================================================================ */
+    .gallery-row {
+      display: grid;
+      grid-template-columns: 3fr 1.4fr;
+    }
+
+    .gallery-photos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gphoto {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+    }
+
+    .gphoto-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform .5s ease;
+    }
+
+    .gphoto:hover .gphoto-bg { transform: scale(1.1); }
+
+    .gphoto:nth-child(1) .gphoto-bg { background-image: url("catalan/tejp.png");   background-size: cover; background-position: center 30%; }
+    .gphoto:nth-child(2) .gphoto-bg { background-image: url("catalan/extra1.png"); background-size: cover; background-position: center; }
+    .gphoto:nth-child(3) .gphoto-bg { background-image: url("catalan/extra2.png"); background-size: cover; background-position: center; }
+
+    /* Instagram card */
+    .ig-card {
+      background: var(--dark-mid);
+      padding: clamp(28px,4vw,52px) clamp(24px,3.5vw,44px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      border-left: 1px solid var(--border);
+    }
+
+    .ig-profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .ig-avatar {
+      position: relative;
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .ig-avatar::after {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: 50%;
+      border: 3px solid var(--yellow);
+      pointer-events: none;
+    }
+
+    .ig-avatar img {
+      width: 72px;
+      height: 72px;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+      border-radius: 50%;
+    }
+
+    .ig-handle {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(16px, 1.9vw, 21px);
+      letter-spacing: 0.03em;
+      color: var(--cream);
+    }
+
+    .ig-desc {
+      font-family: var(--f-body);
+      font-size: clamp(12px, 1.1vw, 13.5px);
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .ig-desc strong {
+      display: block;
+      font-weight: bold;
+      font-size: clamp(12.5px, 1.2vw, 14px);
+      color: var(--cream);
+      margin-bottom: 3px;
+    }
+
+    .btn-ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--yellow);
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(11px, 1.1vw, 13px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 6px;
+      border-bottom: 1.5px solid var(--yellow);
+      width: fit-content;
+      transition: color .18s, border-color .18s;
+    }
+
+    .btn-ig:hover { color: var(--yellow-dark); border-color: var(--yellow-dark); }
+
+    /* ================================================================
+       CTA BAND
+    ================================================================ */
+    .cta-band {
+      background: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: clamp(22px,3vw,38px) clamp(28px,6vw,80px);
+      flex-wrap: wrap;
+    }
+
+    .cta-band h2 {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(40px, 7vw, 92px);
+      color: var(--dark);
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    .cta-band-sub {
+      font-family: var(--f-body);
+      font-size: clamp(12px, 1.3vw, 16px);
+      color: rgba(0,0,0,0.6);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .cta-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--dark);
+      color: var(--cream);
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(13px, 1.5vw, 17px);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: clamp(13px,1.5vw,18px) clamp(18px,2.5vw,28px);
+      white-space: nowrap;
+      transition: background .18s;
+    }
+
+    .btn-dark:hover { background: #222018; }
+
+    /* Hero — existing customer ghost link */
+    .hero-existing {
+      font-family: var(--f-body);
+      font-size: clamp(11px, 1vw, 13px);
+      color: rgba(240,234,216,0.28);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      font-style: italic;
+      transition: color .22s;
+      white-space: nowrap;
+    }
+    .hero-existing:hover { color: rgba(240,234,216,0.65); }
+
+    /* Footer — existing customer own row */
+    .footer-existing {
+      width: 100%;
+      font-family: var(--f-body);
+      font-size: 11px;
+      color: rgba(255,255,255,0.22);
+      text-decoration: none;
+      letter-spacing: 0.07em;
+      font-style: italic;
+      text-align: center;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      transition: color .18s;
+    }
+    .footer-existing:hover { color: rgba(255,255,255,0.55); }
+
+    /* ================================================================
+       FOOTER
+    ================================================================ */
+    footer {
+      background: var(--dark-warm);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: clamp(18px,2.4vw,30px) clamp(28px,6vw,80px);
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-family: var(--f-display);
+      font-weight: normal;
+      font-size: clamp(17px, 2.2vw, 26px);
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      color: var(--cream);
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 40px);
+      flex-wrap: wrap;
+    }
+
+    .footer-link {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-family: var(--f-body);
+      font-size: clamp(12px, 1.2vw, 13px);
+      color: var(--muted);
+      text-decoration: none;
+      transition: color .18s;
+    }
+
+    .footer-link:hover { color: var(--cream); }
+    .footer-link svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .footer-cities {
+      font-family: var(--f-body);
+      font-size: clamp(11.5px, 1.1vw, 13px);
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    /* ================================================================
+       TEJP / TAPE DECORATIONS
+    ================================================================ */
+
+    /* Shared tape style */
+    .tape-deco {
+      position: absolute;
+      background: rgba(228, 208, 148, 0.68);
+      box-shadow: 1px 2px 6px rgba(0,0,0,0.35);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Hero — diagonal tape strip top-left, crossing the brand text area */
+    .hero-content { position: relative; }
+    .tape-hero-1 {
+      width: 70px; height: 16px;
+      top: -6px; left: -12px;
+      transform: rotate(-3deg);
+      opacity: 0.8;
+    }
+    .tape-hero-2 {
+      width: 48px; height: 16px;
+      top: 2px; left: 180px;
+      transform: rotate(2deg);
+      opacity: 0.65;
+    }
+
+    /* City section — tape pinning each city label */
+    .city { position: relative; }
+    .tape-city {
+      width: 44px; height: 14px;
+      bottom: calc(clamp(16px,2.5vw,28px) + 1.2em + 4px);
+      left: clamp(14px,2vw,20px);
+      transform: rotate(-1.5deg);
+      opacity: 0.75;
+      z-index: 3;
+    }
+
+    /* Gallery — tape on top corners of gallery section */
+    .gallery-row { position: relative; }
+    .tape-gallery-1 {
+      width: 60px; height: 15px;
+      top: -4px; left: 18px;
+      transform: rotate(-2.5deg);
+      opacity: 0.72;
+    }
+    .tape-gallery-2 {
+      width: 42px; height: 15px;
+      top: -4px; right: 30px;
+      transform: rotate(2deg);
+      opacity: 0.65;
+    }
+
+    /* Instagram card — tape pinning the handle */
+    .ig-card { position: relative; overflow: visible; }
+    .tape-ig {
+      width: 52px; height: 14px;
+      top: clamp(22px,3.5vw,44px);
+      right: clamp(18px,3vw,36px);
+      transform: rotate(3deg);
+      opacity: 0.7;
+    }
+
+    /* CTA band — tape strip at bottom-right corner */
+    .cta-band { position: relative; }
+    .tape-cta {
+      width: 56px; height: 15px;
+      bottom: -5px; right: clamp(50px,8vw,120px);
+      transform: rotate(-1.8deg);
+      opacity: 0.6;
+    }
+
+    /* ================================================================
+       RESPONSIVE
+    ================================================================ */
+    @media (max-width: 1024px) {
+      .booking-cities { grid-template-columns: 1fr 1.6fr; }
+    }
+
+    @media (max-width: 860px) {
+      .features-inner { grid-template-columns: repeat(2,1fr); }
+      .feat:nth-child(2) { border-right: none; }
+      .feat:nth-child(3),
+      .feat:nth-child(4) { border-top: 1px solid var(--border); }
+
+      .booking-cities { grid-template-columns: 1fr; }
+      .city { min-height: 260px; }
+
+      .gallery-row { grid-template-columns: 1fr; }
+      .ig-card { border-left: none; border-top: 1px solid var(--border); }
+    }
+
+    @media (max-width: 600px) {
+      .features-inner { grid-template-columns: 1fr; }
+      .feat { border-right: none; border-bottom: 1px solid var(--border); }
+      .feat:last-child { border-bottom: none; }
+
+      .cities { grid-template-columns: 1fr; }
+      .city { min-height: 200px; }
+
+      .cta-band { flex-direction: column; text-align: center; }
+      .cta-right { justify-content: center; }
+
+      footer { flex-direction: column; text-align: center; }
+      .footer-links { justify-content: center; }
+      .footer-cities { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="hero-photo"></div>
+  <div class="hero-content">
+    <div class="tape-deco tape-hero-1"></div>
+    <div class="tape-deco tape-hero-2"></div>
+    <div class="hero-brand">
+      <span class="t-poster">POSTER</span>
+      <span class="t-catalan">CATALAN</span>
+    </div>
+    <p class="hero-year">Malmös mesta affischerare — wildposting sedan 2001</p>
+    <p class="hero-text">Vi sätter upp dina affischer där<br>de syns. På gatan. På riktigt.</p>
+    <div style="display:flex;align-items:center;gap:clamp(16px,2.5vw,28px);flex-wrap:wrap">
+      <a href="formulär.html" class="btn-cta">BOKA NU &nbsp;&#8594;</a>
+      <a href="fakturering.html" class="hero-existing">Befintlig kund? Lämna faktureringsuppgifter här &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FEATURES ══════════════════════════════ -->
+<section class="features">
+  <div class="features-inner">
+
+    <div class="feat">
+      <svg class="feat-icon red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <circle cx="12" cy="12" r="10"/>
+        <circle cx="12" cy="12" r="6"/>
+        <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
+      </svg>
+      <div class="feat-body">
+        <h4>Strategiska platser</h4>
+        <p>Hög synlighet</p>
+      </div>
+    </div>
+
+    <div class="feat">
+      <svg class="feat-icon red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <rect x="5" y="4" width="14" height="17" rx="1"/>
+        <rect x="3" y="3" width="14" height="16" rx="1" stroke-opacity="0.45"/>
+        <line x1="8" y1="9"  x2="15" y2="9"/>
+        <line x1="8" y1="13" x2="15" y2="13"/>
+        <line x1="8" y1="17" x2="11" y2="17"/>
+      </svg>
+      <div class="feat-body">
+        <h4>Affischer, flyers &amp; programblad</h4>
+        <p>Alla format</p>
+      </div>
+    </div>
+
+    <div class="feat">
+      <svg class="feat-icon red" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+        <circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none"/>
+      </svg>
+      <div class="feat-body">
+        <h4>Malmö, Skåne &amp; København</h4>
+        <p>Lokal närvaro</p>
+      </div>
+    </div>
+
+    <div class="feat">
+      <svg class="feat-icon yellow" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M13 2 L4 14 H11 L10 22 L21 10 H14 Z"/>
+      </svg>
+      <div class="feat-body">
+        <h4>Snabbt, smidigt &amp; pålitligt</h4>
+        <p>Inget klydd</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════ BOOKING + CITIES ══════════════════════════════ -->
+<section class="booking-cities" id="tjanster">
+
+  <div class="booking-panel">
+    <div class="tape tape-1"></div>
+    <div class="tape tape-2"></div>
+    <h2>BOKA NU</h2>
+
+    <div class="service">
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <ellipse cx="12" cy="5.5" rx="8" ry="2.5"/>
+        <path d="M4 5.5v13C4 19.88 7.58 21 12 21s8-1.12 8-2.5V5.5"/>
+        <line x1="12" y1="8" x2="12" y2="21"/>
+      </svg>
+      <div class="svc-body">
+        <h3>Affischering</h3>
+        <p>Vi sätter upp dina affischer på utvalda platser med hög genomströmning.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="4" y="5" width="13" height="16" rx="1"/>
+        <polyline points="7,5 7,3 20,3 20,18 17,18"/>
+        <line x1="7"  y1="10" x2="14" y2="10"/>
+        <line x1="7"  y1="13.5" x2="14" y2="13.5"/>
+        <line x1="7"  y1="17" x2="10" y2="17"/>
+      </svg>
+      <div class="svc-body">
+        <h3>Flyers &amp; Programblad</h3>
+        <p>Distribution och placering av flyers och programblad.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <svg class="svc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="1"/>
+        <polyline points="7,9 9,11 13,7"/>
+        <polyline points="7,14 9,16 13,12"/>
+        <line x1="15" y1="9"  x2="19" y2="9"/>
+        <line x1="15" y1="14" x2="19" y2="14"/>
+      </svg>
+      <div class="svc-body">
+        <h3>Kampanjpaket</h3>
+        <p>Kompletta lösningar för din kampanj. Vi hjälper dig hela vägen.</p>
+      </div>
+    </div>
+
+    <div class="booking-btn-wrap">
+      <a href="formulär.html" class="btn-booking">SKICKA FÖRFRÅGAN &nbsp;&#8594;</a>
+    </div>
+  </div>
+
+  <div class="cities">
+    <div class="city city-malmo">
+      <div class="city-bg"></div>
+      <div class="city-vignette"></div>
+      <div class="tape-deco tape-city"></div>
+      <span class="city-label">MALMÖ</span>
+    </div>
+    <div class="city city-skane">
+      <div class="city-bg"></div>
+      <div class="city-vignette"></div>
+      <div class="tape-deco tape-city"></div>
+      <span class="city-label">SKÅNE</span>
+    </div>
+    <div class="city city-kbh">
+      <div class="city-bg"></div>
+      <div class="city-vignette"></div>
+      <div class="tape-deco tape-city"></div>
+      <span class="city-label">KØBENHAVN</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ GALLERY + INSTAGRAM ══════════════════════════════ -->
+<section class="gallery-row">
+  <div class="tape-deco tape-gallery-1"></div>
+  <div class="tape-deco tape-gallery-2"></div>
+
+  <div class="gallery-photos">
+    <div class="gphoto"><div class="gphoto-bg"></div></div>
+    <div class="gphoto"><div class="gphoto-bg"></div></div>
+    <div class="gphoto"><div class="gphoto-bg"></div></div>
+  </div>
+
+  <div class="ig-card">
+    <div class="tape-deco tape-ig"></div>
+    <div class="ig-profile">
+      <div class="ig-avatar">
+        <img src="catalan/insta-avatar.jpg" alt="Catalan Marte">
+      </div>
+      <span class="ig-handle">@CATALANMARTE</span>
+    </div>
+    <div class="ig-desc">
+      <strong>Följ med bakom kulisserna.</strong>
+      Nya platser, nya posters, varje vecka.
+    </div>
+    <a href="https://www.instagram.com/catalanmarte/" target="_blank" rel="noopener noreferrer" class="btn-ig">
+      FÖLJ PÅ INSTAGRAM &nbsp;&#8594;
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-left:4px">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+  </div>
+
+</section>
+
+<!-- ══════════════════════════════ CTA BAND ══════════════════════════════ -->
+<section class="cta-band">
+  <div class="tape-deco tape-cta"></div>
+  <div>
+    <h2>REDO ATT SYNAS?</h2>
+    <p class="cta-band-sub">Vi hjälper dig nå ut på rätt platser. Hör av dig!</p>
+  </div>
+  <div class="cta-right">
+    <a href="formulär.html" class="btn-dark">SKICKA FÖRFRÅGAN &nbsp;&#8594;</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer>
+  <div class="footer-logo">POSTER<br>CATALAN</div>
+
+  <div class="footer-links">
+    <a href="tel:+46720152017" class="footer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.7 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+      </svg>
+      0720-152017
+    </a>
+    <a href="mailto:hej@postercatalan.com" class="footer-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"/>
+        <polyline points="2,6 12,14 22,6"/>
+      </svg>
+      hej@postercatalan.com
+    </a>
+    <a href="https://www.instagram.com/catalanmarte/" target="_blank" rel="noopener noreferrer" class="footer-link">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+      @catalanmarte
+    </a>
+  </div>
+
+  <div class="footer-cities">Malmö / Skåne / København</div>
+
+  <a href="fakturering.html" class="footer-existing">Befintlig kund? Lämna faktureringsuppgifter här &rarr;</a>
+</footer>
+
+</body>
+</html>
